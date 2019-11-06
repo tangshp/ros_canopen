@@ -12,3 +12,19 @@ The released version gets synced over to the distro branch for each release.
 
 ## 事先安装muparser
 安装方法见Install.txt文件
+
+## socketcan_bridge_node节点运行注意
+1 运行如下指令
+```shell
+sudo modprobe mttcan
+sudo modprobe can
+sudo modprobe can_raw
+sudo ip link set can0 type can bitrate 500000 dbitrate 2000000 berr-reporting on fd on
+sudo ip link set up can0
+```
+2 运行```ifconfig```(ubuntu16.04) 或者 ```ip a```查询CAN端口是否打开
+
+3 运行```socketcan_bridge_node```
+```shell
+rosrun socketcan_bridge socketcan_bridge_node
+```
