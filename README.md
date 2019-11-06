@@ -9,3 +9,6 @@ Canopen implementation for ROS.
 
 The current develop branch is `melodic-devel`, it targets ROS `melodic`. Needs C++14 compiler.
 The released version gets synced over to the distro branch for each release.
+
+## 事先安装muparser
+安装方法见Install.txt文件
