@@ -22,7 +22,7 @@ sudo modprobe can_raw
 sudo ip link set can0 type can bitrate 500000 dbitrate 2000000 berr-reporting on fd on
 sudo ip link set up can0
 ```
-2 运行```ifconfig```(ubuntu16.04) 或者 ```ip a```查询CAN端口是否打开
+2 运行```ifconfig```(16.04) 或者 ```ip a```(18.04)查询CAN端口是否打开
 
 3 运行```socketcan_bridge_node```
 ```shell
